@@ -58,3 +58,24 @@ Hai config phải dùng cùng golden dataset, generator, evaluator, prompt và `
 | Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
 | ---------- | -------- | -----------: | -----------------: | ---------- |
 | TODO       | TODO     |         TODO |               TODO | TODO       |
+
+## Retrieval threshold calibration
+
+Calibration date: 2026-09-25. The observed values below are top-1 cosine
+similarities from the current five-document guidance corpus using
+`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`. They are not
+RRF scores.
+
+| Query | Domain | Best dense score |
+| ----- | ------ | ---------------: |
+| How must public bodies publish an accessibility statement? | In | 0.7002 |
+| What monitoring methods are required for public-sector websites and mobile apps? | In | 0.6599 |
+| What are the four WCAG accessibility principles? | In | 0.7579 |
+| How do I bake a chocolate cake? | Out | 0.0690 |
+| Who won the 2026 football World Cup? | Out | 0.2804 |
+| Explain quantum chromodynamics and gluon confinement. | Out | 0.1588 |
+
+Chosen `SCORE_THRESHOLD`: **0.30**. In this small calibration sample it lies
+above all out-of-domain scores and below all in-domain scores. This is a
+corpus-specific starting point, not a universal threshold; it must be
+recalibrated after adding the legal PDFs or changing the embedding model.

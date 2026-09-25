@@ -1,13 +1,4 @@
-"""
-Task 7 — Reciprocal Rank Fusion.
-
-RRF gộp nhiều bảng xếp hạng mà không cộng trực tiếp cosine score với BM25
-score. Công thức: RRF(d) = sum(1 / (k + rank)), rank bắt đầu từ 1.
-
-Lưu ý: RRF score chỉ phản ánh thứ hạng, không dùng để quyết định fallback.
-
--> Dùng Jina hoặc self host hoặc bất cứ công cụ nào bạn quen
-"""
+"""Reciprocal Rank Fusion for dense and lexical ranked lists."""
 
 
 def rerank_rrf(
@@ -15,27 +6,44 @@ def rerank_rrf(
     top_k: int = 5,
     k: int = 60,
 ) -> list[dict]:
-    """Fuse nhiều ranked lists và trả hybrid SearchResult."""
-    # TODO: Implement RRF.
-    #
-    # scores = {}
-    # items = {}
-    # for ranked_list in ranked_lists:
-    #     for rank, item in enumerate(ranked_list, 1):
-    #         item_id = item["id"]
-    #         scores[item_id] = scores.get(item_id, 0.0) + 1 / (k + rank)
-    #         items[item_id] = item
-    #
-    # ranked_ids = sorted(scores, key=scores.get, reverse=True)
-    # results = []
-    # for item_id in ranked_ids[:top_k]:
-    #     result = items[item_id].copy()
-    #     result["score"] = scores[item_id]
-    #     result["retrieval_method"] = "hybrid"
-    #     results.append(result)
-    # return results
-    raise NotImplementedError("Implement rerank_rrf")
+    """Fuse rankings by ID without mutating any upstream SearchResult."""
+    if top_k <= 0:
+        return []
+    if k < 0:
+        raise ValueError("k must be non-negative")
+
+    scores: dict[str, float] = {}
+    items: dict[str, dict] = {}
+    first_seen: dict[str, int] = {}
+    sequence = 0
+    for ranked_list in ranked_lists:
+        ids = [item["id"] for item in ranked_list]
+        if len(ids) != len(set(ids)):
+            raise ValueError("Each upstream ranked list must contain unique IDs")
+        for rank, item in enumerate(ranked_list, start=1):
+            item_id = item["id"]
+            scores[item_id] = scores.get(item_id, 0.0) + 1.0 / (k + rank)
+            if item_id not in items:
+                items[item_id] = item
+                first_seen[item_id] = sequence
+                sequence += 1
+
+    ranked_ids = sorted(scores, key=lambda item_id: (-scores[item_id], first_seen[item_id]))
+    results: list[dict] = []
+    for item_id in ranked_ids[:top_k]:
+        result = items[item_id].copy()
+        result["score"] = scores[item_id]
+        result["retrieval_method"] = "hybrid"
+        results.append(result)
+    return results
 
 
 if __name__ == "__main__":
-    print("Implement rerank_rrf, then run contract tests.")
+    from .task5_semantic_search import semantic_search
+    from .task6_lexical_search import lexical_search
+
+    query = "Directive 2016/2102 accessibility statement"
+    dense = semantic_search(query, top_k=6)
+    sparse = lexical_search(query, top_k=6)
+    for result in rerank_rrf([dense, sparse], top_k=3):
+        print(result["score"], result["id"], result["metadata"]["source"])

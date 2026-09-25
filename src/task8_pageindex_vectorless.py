@@ -28,7 +28,9 @@ def upload_documents() -> None:
     #
     # Nếu SDK không nhận Markdown, convert sang PDF tạm trước khi upload.
     # Kiểm tra response thật của SDK thay vì đoán tên field.
-    raise NotImplementedError("Implement upload_documents")
+    if not PAGEINDEX_API_KEY.strip():
+        raise RuntimeError("PageIndex is not configured: PAGEINDEX_API_KEY is empty")
+    raise RuntimeError("PageIndex integration is not enabled for this project")
 
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
@@ -37,7 +39,11 @@ def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
     #
     # Mỗi result cần: id, content, score, metadata, retrieval_method.
     # Nếu API không trả score, có thể gán score giảm dần theo rank.
-    raise NotImplementedError("Implement pageindex_search")
+    if top_k <= 0 or not query.strip():
+        return []
+    if not PAGEINDEX_API_KEY.strip():
+        raise RuntimeError("PageIndex is not configured: PAGEINDEX_API_KEY is empty")
+    raise RuntimeError("PageIndex integration is not enabled for this project")
 
 
 if __name__ == "__main__":
