@@ -1,0 +1,869 @@
+{
+  "run": {
+    "generator_model": "gemini-3.1-flash-lite-preview",
+    "evaluator_model": "gemini-3.1-flash-lite-preview",
+    "top_k": 5,
+    "config_a": "dense-only",
+    "config_b": "dense + BM25 + one RRF fusion"
+  },
+  "cases": [
+    {
+      "case_id": 1,
+      "config": "A",
+      "question": "What must an accessibility statement for a public-sector website or mobile app include?",
+      "expected_answer": "It must identify non-accessible content, provide accessible alternatives, and give contact information.",
+      "expected_context": "The WAD requires an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts.",
+      "answer": "Tuyên bố về khả năng tiếp cận (accessibility statement) phải bao gồm thông tin về sự tuân thủ của các trang web và ứng dụng di động đối với các yêu cầu về khả năng tiếp cận được quy định trong Chỉ thị [S1], [S4]. Trong trường hợp phù hợp, tuyên bố này cũng nên bao gồm các phương án thay thế có thể truy cập được (accessible alternatives) đã được cung cấp [S1].",
+      "contexts": [
+        "An accessibility statement should be provided by public sector bodies on the compliance\nof their websites and mobile applications with the accessibility requirements laid down\nby this Directive. That accessibility statement should include, where appropriate, the\naccessible alternatives provided for.",
+        "To ensure easy access to the accessibility statement, Member States should encourage\npublic  sector  bodies  to  make  their  statements  accessible  from  each  web  page  of  the\nwebsite. The statements may also be available from within the mobile application.",
+        "This  Directive  lays  down  accessibility  requirements  for  the  websites  and  mobile\napplications  of  public  sector  bodies.  In  order  to  facilitate  the  conformity  of  such\nwebsites and mobile applications with those requirements, it is necessary to provide\nfor a presumption of conformity for the websites and mobile applications concerned\nthat meet harmonised standards or parts thereof drawn up and published in the Official",
+        "applications of public sector bodies and lays down the requirements for accessibility statements that need to be\nprovided by public sector bodies on the compliance of their websites and mobile applications with that directive.\n(2) Member States should ensure that public sector bodies provide accessibility statements using a model accessibility\nstatement established by the Commission.",
+        "For mobile applications, the accessibility statement shall be provided in an accessible\nformat, using the model accessibility statement referred to in paragraph 2, and shall be\navailable on the website of the public sector body that developed the mobile application\nconcerned, or alongside other information available when downloading the application.\n\nThe statement shall include the following:\n\n(a)\n\n(b)\n\n(c)"
+      ],
+      "source_ids": [
+        "legal/directive_eu_2016_2102::chunk-00083",
+        "legal/implementing_decision_eu_2018_1523::chunk-00006",
+        "legal/directive_eu_2016_2102::chunk-00078",
+        "legal/official_journal_l256_2018::chunk-00675",
+        "legal/directive_eu_2016_2102::chunk-00145"
+      ],
+      "latency_seconds": 32.304,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.8,
+      "context_recall": 0.5,
+      "context_precision": 0.8,
+      "failure_reason": "The answer misses the requirement to identify non-accessible content, which is a key part of the expected answer."
+    },
+    {
+      "case_id": 1,
+      "config": "B",
+      "question": "What must an accessibility statement for a public-sector website or mobile app include?",
+      "expected_answer": "It must identify non-accessible content, provide accessible alternatives, and give contact information.",
+      "expected_context": "The WAD requires an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts.",
+      "answer": "Đối với các ứng dụng di động và trang web của cơ quan khu vực công, tuyên bố về khả năng tiếp cận phải bao gồm các thông tin sau:\n\n*   Tuyên bố về trạng thái tuân thủ [S2].\n*   Phạm vi áp dụng của tuyên bố (ví dụ: các trang web hoặc ứng dụng di động cụ thể mà tuyên bố đó áp dụng) [S2].\n*   Các giải pháp thay thế có thể truy cập được, nếu có [S5].\n\nNgoài ra, tuyên bố phải được cung cấp ở định dạng có thể truy cập được [S1]. Đối với ứng dụng di động, tuyên bố phải sử dụng mẫu tuyên bố về khả năng tiếp cận theo quy định và có sẵn trên trang web của cơ quan khu vực công đã phát triển ứng dụng đó, hoặc cùng với các thông tin khác khi tải xuống ứng dụng [S1].",
+      "contexts": [
+        "For mobile applications, the accessibility statement shall be provided in an accessible\nformat, using the model accessibility statement referred to in paragraph 2, and shall be\navailable on the website of the public sector body that developed the mobile application\nconcerned, or alongside other information available when downloading the application.\n\nThe statement shall include the following:\n\n(a)\n\n(b)\n\n(c)",
+        "This  accessibility  statement  applies  to  [insert  scope  of  statement,  e.g.  website(s)/mobile\napplication(si) to which the statement applies, as appropriate].\nCompliance statusii",
+        "To ensure easy access to the accessibility statement, Member States should encourage\npublic  sector  bodies  to  make  their  statements  accessible  from  each  web  page  of  the\nwebsite. The statements may also be available from within the mobile application.",
+        "The accessibility requirements set out in this Directive are intended to be technology-\nneutral.  They  describe  what  must  be  achieved  in  order  for  the  user  to  be  able  to\nperceive, operate, interpret and understand a website, a mobile application and related\ncontent.  They  do  not  specify  what  technology  should  be  selected  for  a  particular\nwebsite,  online  information  or  mobile  application.  As  such,  they  do  not  hamper\ninnovation.",
+        "An accessibility statement should be provided by public sector bodies on the compliance\nof their websites and mobile applications with the accessibility requirements laid down\nby this Directive. That accessibility statement should include, where appropriate, the\naccessible alternatives provided for."
+      ],
+      "source_ids": [
+        "legal/directive_eu_2016_2102::chunk-00145",
+        "legal/implementing_decision_eu_2018_1523::chunk-00019",
+        "legal/implementing_decision_eu_2018_1523::chunk-00006",
+        "legal/directive_eu_2016_2102::chunk-00064",
+        "legal/directive_eu_2016_2102::chunk-00083"
+      ],
+      "latency_seconds": 6.765,
+      "faithfulness": 1.0,
+      "answer_relevance": 0.85,
+      "context_recall": 0.5,
+      "context_precision": 0.7,
+      "failure_reason": "The answer fails to explicitly mention the requirement to identify non-accessible content, despite the context providing enough information."
+    },
+    {
+      "case_id": 2,
+      "config": "A",
+      "question": "How can users report an accessibility problem or request inaccessible information under the WAD?",
+      "expected_answer": "Public-sector sites and apps must provide a feedback mechanism through which users can flag accessibility problems or request information published in an inaccessible form.",
+      "expected_context": "The WAD requires a feedback mechanism so users can flag accessibility problems or request information published in non-accessible content.",
+      "answer": "Theo quy định của WAD, người dùng có thể báo cáo các vấn đề về khả năng tiếp cận hoặc yêu cầu thông tin được xuất bản trong nội dung không thể tiếp cận thông qua một cơ chế phản hồi (feedback mechanism) [S1].",
+      "contexts": [
+        "The WAD requires:\n\n- an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts\n\n- a feedback mechanism so users can flag accessibility problems or request information published in a non-accessible content\n\n- regular monitoring of public sector websites and apps by Member States, and reporting on the results to the Commission every three years",
+        "## The Web Accessibility Directive\n\nThe Web Accessibility Directive (WAD) has been in force since 22 December 2016 and provides people with disabilities with better access to websites and mobile apps of public services. Read also a summary of the Web Accessibility Directive .",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "### Review of the Web Accessibility Directive\n\nThe Commission reviewed the Web Accessibility Directive in 2022. The review took into account the results of a public consultation held in 2021 that gathered views on the application of the WAD in practice, the Member States first accessibility monitoring reports and a supporting study. You can read the Evaluation report and its Executive summary . These documents and the consultation results are also published on the Have your say portal.",
+        "### Monitoring of the Web Accessibility Directive\n\nThe WAD requires Member States to periodically monitor the compliance of websites and mobile applications of public sector bodies with the accessibility requirements. Since 2021 , and every three years thereafter, Member States publish and submit to the Commission a report on the outcome of the monitoring and use of enforcement.\n\n## Accessibility overlays"
+      ],
+      "source_ids": [
+        "news/article_01::chunk-00009",
+        "news/article_01::chunk-00007",
+        "news/article_02::chunk-00006",
+        "news/article_01::chunk-00011",
+        "news/article_01::chunk-00015"
+      ],
+      "latency_seconds": 3.229,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 2,
+      "config": "B",
+      "question": "How can users report an accessibility problem or request inaccessible information under the WAD?",
+      "expected_answer": "Public-sector sites and apps must provide a feedback mechanism through which users can flag accessibility problems or request information published in an inaccessible form.",
+      "expected_context": "The WAD requires a feedback mechanism so users can flag accessibility problems or request information published in non-accessible content.",
+      "answer": "Theo Chỉ thị về khả năng tiếp cận web (WAD), người dùng có thể báo cáo các vấn đề về khả năng tiếp cận hoặc yêu cầu thông tin được xuất bản trong nội dung không thể truy cập thông qua cơ chế phản hồi (feedback mechanism) [S1].\n\nCơ chế này bao gồm:\n*   Mô tả và liên kết đến cơ chế phản hồi cho phép bất kỳ cá nhân nào thông báo cho cơ quan khu vực công về việc trang web hoặc ứng dụng di động không tuân thủ các yêu cầu về khả năng tiếp cận [S2].\n*   Liên kết đến quy trình thực thi (enforcement procedure) để người dùng có thể sử dụng trong trường hợp nhận được phản hồi không thỏa đáng đối với thông báo hoặc yêu cầu của họ [S2].",
+      "contexts": [
+        "The WAD requires:\n\n- an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts\n\n- a feedback mechanism so users can flag accessibility problems or request information published in a non-accessible content\n\n- regular monitoring of public sector websites and apps by Member States, and reporting on the results to the Commission every three years",
+        "a description of, and a link to, a feedback mechanism enabling any person to notify\nthe public sector body concerned of any failure of its website or mobile application\nto comply with the accessibility requirements set out in Article 4 and to request the\ninformation excluded pursuant to Article 1(4) and Article 5; and\n\na link to the enforcement procedure set out in Article 9 to which recourse may be had\nin the event of an unsatisfactory response to the notification or the request.",
+        "preferences.\n1.2.4. The in-depth monitoring method may include, where appropriate, usability tests such as observing and analysing\nhow users with disabilities perceive the content of the website or mobile application and how complex it is for\nthem to use interface components like navigation menus or forms.\n1.2.5. The monitoring body may use, fully or in part, evaluation results provided by the public sector body under the\nfollowing cumulative conditions:",
+        "### Monitoring of the Web Accessibility Directive\n\nThe WAD requires Member States to periodically monitor the compliance of websites and mobile applications of public sector bodies with the accessibility requirements. Since 2021 , and every three years thereafter, Member States publish and submit to the Commission a report on the outcome of the monitoring and use of enforcement.\n\n## Accessibility overlays",
+        "### Review of the Web Accessibility Directive\n\nThe Commission reviewed the Web Accessibility Directive in 2022. The review took into account the results of a public consultation held in 2021 that gathered views on the application of the WAD in practice, the Member States first accessibility monitoring reports and a supporting study. You can read the Evaluation report and its Executive summary . These documents and the consultation results are also published on the Have your say portal."
+      ],
+      "source_ids": [
+        "news/article_01::chunk-00009",
+        "legal/directive_eu_2016_2102::chunk-00147",
+        "legal/official_journal_l256_2018::chunk-00731",
+        "news/article_01::chunk-00015",
+        "news/article_01::chunk-00011"
+      ],
+      "latency_seconds": 7.661,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 3,
+      "config": "A",
+      "question": "How often must Member States report web-accessibility monitoring results to the European Commission?",
+      "expected_answer": "They must report every three years, starting from 2021.",
+      "expected_context": "Since 2021 and every three years thereafter, Member States publish and submit a report on monitoring outcomes and enforcement.",
+      "answer": "Tôi không thể xác minh thông tin này từ các nguồn hiện có.",
+      "contexts": [
+        "EU countries have to inform the Commission of the bodies that monitor, report and enforce the implementation of the Web Accessibility Directive.\n\nThe main monitoring functions are to:\n\n- periodically monitor the accessibility of websites and mobile applications of public sector bodies;\n\n- provide information on compliance to the public sector bodies.",
+        "L 256/108 EN Official Journal of the European Union 12.10.2018\nCOMMISSION IMPLEMENTING DECISION (EU) 2018/1524\nof 11 October 2018\nestablishing a monitoring methodology and the arrangements for reporting by Member States in\naccordance with Directive (EU) 2016/2102 of the European Parliament and of the Council on the\naccessibility of the websites and mobile applications of public sector bodies\n(notified under document C(2018) 6560)\n(Text with EEA relevance)\nTHE EUROPEAN COMMISSION,",
+        "information on compliance with the accessibility requirements in relation to the deficiencies of their respective websites\nand mobile applications, within a reasonable time and in a format helping public sector bodies to correct them.\nArticle 8\nFormat of the report\n1. Member States shall submit the report referred to in Article 8(4) of Directive (EU) 2016/2102 to the Commission\nin an accessible format in an official language of the European Union.",
+        "12.10.2018 EN Official Journal of the European Union L 256/109\n(10) Comparability of the monitoring results should be ensured through the use of the monitoring methodology and\nreporting laid down in this Decision. In order to foster the sharing of best practices and to promote transparency,\nMember States should make public how they monitor, as well as make publicly available a mapping, in the form",
+        "a monitoring methodology and the arrangements for reporting by Member States in\naccordance with Directive (EU) 2016/2102 of the European Parliament and of the Council on\nthe accessibility of the websites and mobile applications of public sector bodies (notified under\ndocument C(2018) 6560) (1) ................................................................................................. 108\nACTS ADOPTED BY BODIES CREATED BY INTERNATIONAL AGREEMENTS"
+      ],
+      "source_ids": [
+        "news/article_03::chunk-00002",
+        "legal/official_journal_l256_2018::chunk-00701",
+        "legal/official_journal_l256_2018::chunk-00722",
+        "legal/official_journal_l256_2018::chunk-00710",
+        "legal/official_journal_l256_2018::chunk-00012"
+      ],
+      "latency_seconds": 69.156,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_recall": 0.0,
+      "context_precision": 0.0,
+      "failure_reason": "The model failed to extract the answer from the provided context, which contained the necessary information."
+    },
+    {
+      "case_id": 3,
+      "config": "B",
+      "question": "How often must Member States report web-accessibility monitoring results to the European Commission?",
+      "expected_answer": "They must report every three years, starting from 2021.",
+      "expected_context": "Since 2021 and every three years thereafter, Member States publish and submit a report on monitoring outcomes and enforcement.",
+      "answer": "Tôi không thể xác minh thông tin này từ các nguồn hiện có.",
+      "contexts": [
+        "12.10.2018 EN Official Journal of the European Union L 256/109\n(10) Comparability of the monitoring results should be ensured through the use of the monitoring methodology and\nreporting laid down in this Decision. In order to foster the sharing of best practices and to promote transparency,\nMember States should make public how they monitor, as well as make publicly available a mapping, in the form",
+        "a monitoring methodology and the arrangements for reporting by Member States in\naccordance with Directive (EU) 2016/2102 of the European Parliament and of the Council on\nthe accessibility of the websites and mobile applications of public sector bodies (notified under\ndocument C(2018) 6560) (1) ................................................................................................. 108\nACTS ADOPTED BY BODIES CREATED BY INTERNATIONAL AGREEMENTS",
+        "L 256/108 EN Official Journal of the European Union 12.10.2018\nCOMMISSION IMPLEMENTING DECISION (EU) 2018/1524\nof 11 October 2018\nestablishing a monitoring methodology and the arrangements for reporting by Member States in\naccordance with Directive (EU) 2016/2102 of the European Parliament and of the Council on the\naccessibility of the websites and mobile applications of public sector bodies\n(notified under document C(2018) 6560)\n(Text with EEA relevance)\nTHE EUROPEAN COMMISSION,",
+        "### Review of the Web Accessibility Directive\n\nThe Commission reviewed the Web Accessibility Directive in 2022. The review took into account the results of a public consultation held in 2021 that gathered views on the application of the WAD in practice, the Member States first accessibility monitoring reports and a supporting study. You can read the Evaluation report and its Executive summary . These documents and the consultation results are also published on the Have your say portal.",
+        "EU countries have to inform the Commission of the bodies that monitor, report and enforce the implementation of the Web Accessibility Directive.\n\nThe main monitoring functions are to:\n\n- periodically monitor the accessibility of websites and mobile applications of public sector bodies;\n\n- provide information on compliance to the public sector bodies."
+      ],
+      "source_ids": [
+        "legal/official_journal_l256_2018::chunk-00710",
+        "legal/official_journal_l256_2018::chunk-00012",
+        "legal/official_journal_l256_2018::chunk-00701",
+        "news/article_01::chunk-00011",
+        "news/article_03::chunk-00002"
+      ],
+      "latency_seconds": 11.545,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "The model failed to answer the question despite the information being present in the retrieved context."
+    },
+    {
+      "case_id": 4,
+      "config": "A",
+      "question": "Which two Commission implementing decisions adopted in October 2018 support the Web Accessibility Directive?",
+      "expected_answer": "Decision (EU) 2018/1523 establishes the model accessibility statement, and Decision (EU) 2018/1524 establishes the monitoring methodology and reporting arrangements.",
+      "expected_context": "The Commission adopted Decision (EU) 2018/1523 on a model accessibility statement and Decision (EU) 2018/1524 on monitoring methodology and reporting arrangements.",
+      "answer": "Hai quyết định thực thi của Ủy ban được thông qua vào tháng 10 năm 2018 nhằm hỗ trợ Chỉ thị về khả năng tiếp cận web là:\n\n- Quyết định thực thi (EU) 2018/1523 của Ủy ban thiết lập mẫu tuyên bố về khả năng tiếp cận [S2], [S4].\n- Quyết định thực thi (EU) 2018/1524 của Ủy ban thiết lập phương pháp giám sát và các thỏa thuận báo cáo của các Quốc gia thành viên [S4].",
+      "contexts": [
+        "- Press release\n\n- 07 December 2022\n\nThe Commission has published the review of the Web Accessibility directive, four years after its transposition into national law by Member States. The review includes the results of a public consultation held in 2021 that gathered views on the application of the Directive in practice, Member States’ accessibility monitoring reports and a supporting study.\n\n## Related Content\n\n### Big Picture",
+        "Commission Implementing Decision (EU) 2018/1523 of 11 October 2018 establishing\na model accessibility statement in accordance with Directive (EU) 2016/2102 of\nthe European Parliament and of the Council on the accessibility of the websites\nand mobile applications of public sector bodies (Text with EEA relevance)\n\nCOMMISSION IMPLEMENTING DECISION (EU) 2018/1523\n\nof 11 October 2018",
+        "- Report / Study\n\n- 07 December 2022\n\nThe aim of the study is to support the review of the Web Accessibility Directive and its implementing acts, covering the first three years of their application (2018-2021).\n\n- Policy and legislation\n\n- 12 April 2022\n\nThe Commission has published a report on the availability of copyright protected works in accessible formats for persons with disabilities, beyond the “Marrakesh” Directive 2017/1564.\n\n## Related Content\n\n### Big Picture",
+        "In October 2018, the Commission adopted two implementing decisions ensuring uniform conditions for the implementation of the Directive:\n\n- Commission Implementing Decision (EU) 2018/1523 establishing a model accessibility statement\n\n- Commission Implementing Decision (EU) 2018/1524 establishing a monitoring methodology and the arrangements for reporting by Member States",
+        "### Review of the Web Accessibility Directive\n\nThe Commission reviewed the Web Accessibility Directive in 2022. The review took into account the results of a public consultation held in 2021 that gathered views on the application of the WAD in practice, the Member States first accessibility monitoring reports and a supporting study. You can read the Evaluation report and its Executive summary . These documents and the consultation results are also published on the Have your say portal."
+      ],
+      "source_ids": [
+        "news/article_03::chunk-00057",
+        "legal/implementing_decision_eu_2018_1523::chunk-00001",
+        "news/article_01::chunk-00020",
+        "news/article_01::chunk-00013",
+        "news/article_01::chunk-00011"
+      ],
+      "latency_seconds": 4.398,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 0.8,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 4,
+      "config": "B",
+      "question": "Which two Commission implementing decisions adopted in October 2018 support the Web Accessibility Directive?",
+      "expected_answer": "Decision (EU) 2018/1523 establishes the model accessibility statement, and Decision (EU) 2018/1524 establishes the monitoring methodology and reporting arrangements.",
+      "expected_context": "The Commission adopted Decision (EU) 2018/1523 on a model accessibility statement and Decision (EU) 2018/1524 on monitoring methodology and reporting arrangements.",
+      "answer": "Hai quyết định thực thi của Ủy ban được thông qua vào tháng 10 năm 2018 nhằm hỗ trợ Chỉ thị về khả năng tiếp cận web là:\n\n*   Quyết định thực thi (EU) 2018/1523 của Ủy ban thiết lập một mẫu tuyên bố về khả năng tiếp cận [S1], [S2].\n*   Quyết định thực thi (EU) 2018/1524 của Ủy ban thiết lập phương pháp giám sát và các thỏa thuận báo cáo của các Quốc gia thành viên [S1].",
+      "contexts": [
+        "In October 2018, the Commission adopted two implementing decisions ensuring uniform conditions for the implementation of the Directive:\n\n- Commission Implementing Decision (EU) 2018/1523 establishing a model accessibility statement\n\n- Commission Implementing Decision (EU) 2018/1524 establishing a monitoring methodology and the arrangements for reporting by Member States",
+        "(4) Commission  Implementing  Decision  (EU)  2018/1523  of  11  October  2018  establishing  a  model\naccessibility statement in accordance with Directive (EU) 2016/2102 of the European Parliament\nand of the Council on the accessibility of the websites and mobile applications of public sector\nbodies (OJ L 256, 12.10.2018, p. 103).\n\n\f8\n\nCommission Implementing Decision (EU) 2018/1523 of 11 October 2018 establishing a model\naccessibility statement...\nDocument Generated: 2020-11-17",
+        "### Review of the Web Accessibility Directive\n\nThe Commission reviewed the Web Accessibility Directive in 2022. The review took into account the results of a public consultation held in 2021 that gathered views on the application of the WAD in practice, the Member States first accessibility monitoring reports and a supporting study. You can read the Evaluation report and its Executive summary . These documents and the consultation results are also published on the Have your say portal.",
+        "- Press release\n\n- 07 December 2022\n\nThe Commission has published the review of the Web Accessibility directive, four years after its transposition into national law by Member States. The review includes the results of a public consultation held in 2021 that gathered views on the application of the Directive in practice, Member States’ accessibility monitoring reports and a supporting study.\n\n## Related Content\n\n### Big Picture",
+        "Commission Implementing Decision (EU) 2018/1523 of 11 October 2018 establishing\na model accessibility statement in accordance with Directive (EU) 2016/2102 of\nthe European Parliament and of the Council on the accessibility of the websites\nand mobile applications of public sector bodies (Text with EEA relevance)\n\nCOMMISSION IMPLEMENTING DECISION (EU) 2018/1523\n\nof 11 October 2018"
+      ],
+      "source_ids": [
+        "news/article_01::chunk-00013",
+        "legal/implementing_decision_eu_2018_1523::chunk-00037",
+        "news/article_01::chunk-00011",
+        "news/article_03::chunk-00057",
+        "legal/implementing_decision_eu_2018_1523::chunk-00001"
+      ],
+      "latency_seconds": 4.041,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 0.8,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 5,
+      "config": "A",
+      "question": "Why are accessibility overlays not considered an adequate solution for WAD compliance?",
+      "expected_answer": "An overlay is inadequate when it does not make the website itself meet the detailed technical criteria; accessibility defects should be fixed at their source.",
+      "expected_context": "Overlays or other tools that do not ensure the website itself meets the detailed standard are not appropriate; issues should be fixed at source.",
+      "answer": "Các lớp phủ hỗ trợ tiếp cận (accessibility overlays) không được coi là giải pháp phù hợp vì chúng không đảm bảo trang web đáp ứng được các tiêu chí kỹ thuật chi tiết của tiêu chuẩn hài hòa châu Âu EN 301 549 v3.2.1 [S3]. Thay vào đó, các vấn đề về khả năng tiếp cận nên được khắc phục ngay tại nguồn [S3].",
+      "contexts": [
+        "The WAD requires:\n\n- an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts\n\n- a feedback mechanism so users can flag accessibility problems or request information published in a non-accessible content\n\n- regular monitoring of public sector websites and apps by Member States, and reporting on the results to the Commission every three years",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "## Accessibility overlays\n\nThe legal accessibility requirements in the EU are underpinned by technical criteria specified in the harmonised European standard EN 301 549 v3.2.1. Accessibility overlays are tools that can be added to websites with the aim of improving accessibility. Overlays, or any other tools which do not ensure the website itself meets the detailed criteria of the standard, are not an appropriate solution. It is best to fix accessibility issues at their source.",
+        "## The Web Accessibility Directive\n\nThe Web Accessibility Directive (WAD) has been in force since 22 December 2016 and provides people with disabilities with better access to websites and mobile apps of public services. Read also a summary of the Web Accessibility Directive .",
+        "### Monitoring of the Web Accessibility Directive\n\nThe WAD requires Member States to periodically monitor the compliance of websites and mobile applications of public sector bodies with the accessibility requirements. Since 2021 , and every three years thereafter, Member States publish and submit to the Commission a report on the outcome of the monitoring and use of enforcement.\n\n## Accessibility overlays"
+      ],
+      "source_ids": [
+        "news/article_01::chunk-00009",
+        "news/article_02::chunk-00006",
+        "news/article_01::chunk-00016",
+        "news/article_01::chunk-00007",
+        "news/article_01::chunk-00015"
+      ],
+      "latency_seconds": 3.909,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 5,
+      "config": "B",
+      "question": "Why are accessibility overlays not considered an adequate solution for WAD compliance?",
+      "expected_answer": "An overlay is inadequate when it does not make the website itself meet the detailed technical criteria; accessibility defects should be fixed at their source.",
+      "expected_context": "Overlays or other tools that do not ensure the website itself meets the detailed standard are not appropriate; issues should be fixed at source.",
+      "answer": "Các công cụ hỗ trợ truy cập (accessibility overlays) không được coi là giải pháp phù hợp vì chúng không đảm bảo rằng bản thân trang web đáp ứng được các tiêu chí chi tiết của tiêu chuẩn hài hòa EN 301 549 v3.2.1 [S5]. Thay vào đó, phương pháp tối ưu là khắc phục các vấn đề về khả năng truy cập ngay tại nguồn [S5].",
+      "contexts": [
+        "### Monitoring of the Web Accessibility Directive\n\nThe WAD requires Member States to periodically monitor the compliance of websites and mobile applications of public sector bodies with the accessibility requirements. Since 2021 , and every three years thereafter, Member States publish and submit to the Commission a report on the outcome of the monitoring and use of enforcement.\n\n## Accessibility overlays",
+        "The WAD requires:\n\n- an accessibility statement for each website and mobile app, stating non-accessible content and alternatives as well as contacts\n\n- a feedback mechanism so users can flag accessibility problems or request information published in a non-accessible content\n\n- regular monitoring of public sector websites and apps by Member States, and reporting on the results to the Commission every three years",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "However, EN 301 549 v3.2.1 includes requirements that are not part of WCAG 2.1 . EN 301 549 also includes requirements that are not relevant to the WAD, for example accessibility requirements of computer hardware systems. The requirements of the standard that are relevant to the WAD are defined in Annex A .",
+        "## Accessibility overlays\n\nThe legal accessibility requirements in the EU are underpinned by technical criteria specified in the harmonised European standard EN 301 549 v3.2.1. Accessibility overlays are tools that can be added to websites with the aim of improving accessibility. Overlays, or any other tools which do not ensure the website itself meets the detailed criteria of the standard, are not an appropriate solution. It is best to fix accessibility issues at their source."
+      ],
+      "source_ids": [
+        "news/article_01::chunk-00015",
+        "news/article_01::chunk-00009",
+        "news/article_02::chunk-00006",
+        "news/article_02::chunk-00016",
+        "news/article_01::chunk-00016"
+      ],
+      "latency_seconds": 5.845,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None."
+    },
+    {
+      "case_id": 6,
+      "config": "A",
+      "question": "What does presumption of conformity mean under the Web Accessibility Directive?",
+      "expected_answer": "If a website or app meets all applicable requirements of the harmonised technical standard, it is presumed accessible under the WAD.",
+      "expected_context": "Meeting all applicable technical requirements in the harmonised standard gives a legal presumption that the website or app is accessible under the WAD.",
+      "answer": "Theo Chỉ thị (EU) 2016/2102, giả định về sự phù hợp (presumption of conformity) có nghĩa là các trang web và ứng dụng di động của các cơ quan khu vực công được coi là đáp ứng các yêu cầu về khả năng tiếp cận nếu chúng tuân thủ các tiêu chuẩn hài hòa hoặc các phần của tiêu chuẩn đó đã được soạn thảo và công bố [S1]. Việc áp dụng giả định này nhằm mục đích tạo điều kiện thuận lợi cho việc đảm bảo sự phù hợp của các trang web và ứng dụng di động với các yêu cầu về khả năng tiếp cận [S1].",
+      "contexts": [
+        "This  Directive  lays  down  accessibility  requirements  for  the  websites  and  mobile\napplications  of  public  sector  bodies.  In  order  to  facilitate  the  conformity  of  such\nwebsites and mobile applications with those requirements, it is necessary to provide\nfor a presumption of conformity for the websites and mobile applications concerned\nthat meet harmonised standards or parts thereof drawn up and published in the Official",
+        "The four principles of accessibility are: perceivability, meaning that information and\nuser  interface  components  must  be  presentable  to  users  in  ways  they  can  perceive;\noperability, meaning that user interface components and navigation must be operable;\nunderstandability,  meaning  that  information  and  the  operation  of  the  user  interface\nmust be understandable; and robustness, meaning that content must be robust enough",
+        "### Dig deeper\n\n- Web accessibility standards - latest changes\n\nFind out about the latest changes to web accessibility standard EN 301 549 and the rationale behind...\n\n- Web Accessibility Directive Expert Group - WADEX\n\nThe Web Accessibility Directive Expert Group was set up to provide support on the implementation of...\n\n#### Last update\n\n5 May 2025\n\n- Digital EU on Mastadon\n\n- Digital EU on LinkedIn\n\n- Digital EU on Facebook\n\n- Digital EU on Youtube\n\n- Digital EU on Instagram",
+        "The  accessibility  statement  should  be  easy  to  find  for  the  user.  A  link  to  the  accessibility\nstatement should be prominently placed on the homepage of the website or made available on\nevery web page, for example in a static header or footer. A standardised URL may be used for\nthe accessibility statement. For mobile applications, the statement should be located as indicated\nin the third subparagraph of Article 7(1) of Directive (EU) 2016/2102. The statement may also",
+        "This  accessibility  statement  applies  to  [insert  scope  of  statement,  e.g.  website(s)/mobile\napplication(si) to which the statement applies, as appropriate].\nCompliance statusii"
+      ],
+      "source_ids": [
+        "legal/directive_eu_2016_2102::chunk-00078",
+        "legal/directive_eu_2016_2102::chunk-00066",
+        "news/article_02::chunk-00022",
+        "legal/implementing_decision_eu_2018_1523::chunk-00016",
+        "legal/implementing_decision_eu_2018_1523::chunk-00019"
+      ],
+      "latency_seconds": 5.534,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 6,
+      "config": "B",
+      "question": "What does presumption of conformity mean under the Web Accessibility Directive?",
+      "expected_answer": "If a website or app meets all applicable requirements of the harmonised technical standard, it is presumed accessible under the WAD.",
+      "expected_context": "Meeting all applicable technical requirements in the harmonised standard gives a legal presumption that the website or app is accessible under the WAD.",
+      "answer": "Theo Chỉ thị về khả năng tiếp cận web (WAD), \"giả định về sự phù hợp\" (presumption of conformity) có nghĩa là nếu nội dung của một trang web hoặc ứng dụng di động đáp ứng tất cả các yêu cầu kỹ thuật áp dụng được xác định trong tiêu chuẩn hài hòa, thì nội dung đó được coi là \"có thể tiếp cận\" theo WAD [S4].\n\nViệc cung cấp giả định này nhằm tạo điều kiện thuận lợi cho sự phù hợp của các trang web và ứng dụng di động của các cơ quan khu vực công với các yêu cầu về khả năng tiếp cận [S1]. Giả định về sự phù hợp với các yêu cầu về khả năng tiếp cận được quy định trong Chỉ thị này dựa trên các tiêu chuẩn hài hòa hoặc các phần của tiêu chuẩn đó đã được soạn thảo và công bố [S1], [S5].",
+      "contexts": [
+        "This  Directive  lays  down  accessibility  requirements  for  the  websites  and  mobile\napplications  of  public  sector  bodies.  In  order  to  facilitate  the  conformity  of  such\nwebsites and mobile applications with those requirements, it is necessary to provide\nfor a presumption of conformity for the websites and mobile applications concerned\nthat meet harmonised standards or parts thereof drawn up and published in the Official",
+        "## The Web Accessibility Directive\n\nThe Web Accessibility Directive (WAD) has been in force since 22 December 2016 and provides people with disabilities with better access to websites and mobile apps of public services. Read also a summary of the Web Accessibility Directive .",
+        "This  accessibility  statement  applies  to  [insert  scope  of  statement,  e.g.  website(s)/mobile\napplication(si) to which the statement applies, as appropriate].\nCompliance statusii",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "The European standardisation organisations have adopted European standard EN 301\n549  V1.1.2  (2015-04),  specifying  the  functional  accessibility  requirements  for  ICT\nproducts  and  services,  including  web  content,  which  could  be  used  in  public\nprocurement or to support other policies and legislation. The presumption of conformity\nwith  the  accessibility  requirements  laid  down  in  this  Directive  should  be  based  on"
+      ],
+      "source_ids": [
+        "legal/directive_eu_2016_2102::chunk-00078",
+        "news/article_01::chunk-00007",
+        "legal/implementing_decision_eu_2018_1523::chunk-00019",
+        "news/article_02::chunk-00006",
+        "legal/directive_eu_2016_2102::chunk-00080"
+      ],
+      "latency_seconds": 8.096,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 7,
+      "config": "A",
+      "question": "What two conditions make a technical standard a harmonised European standard with legal force?",
+      "expected_answer": "It must be developed by one or more European Standards Organisations under a Commission mandate, and a reference to the specific version must be published in the Official Journal of the EU.",
+      "expected_context": "A harmonised standard is developed by an ESO under a Commission mandate and its specific version is referenced in the Official Journal.",
+      "answer": "Để một tiêu chuẩn kỹ thuật trở thành tiêu chuẩn châu Âu hài hòa (HEN) có hiệu lực pháp lý theo luật pháp châu Âu, cần đáp ứng các điều kiện sau:\n\n1. Tiêu chuẩn đó phải được phát triển bởi một hoặc nhiều trong ba Tổ chức Tiêu chuẩn hóa Châu Âu (ESOs), bao gồm ETSI, CEN và CENELEC, theo sự ủy quyền từ Ủy ban Châu Âu [S2].\n2. Ủy ban Châu Âu phải quyết định hài hòa tiêu chuẩn đó bằng cách công bố tham chiếu trong Công báo (Official Journal) [S1].",
+      "contexts": [
+        "Not all versions of a technical standard are necessarily harmonised. It is up to the European Commission to decide whether to harmonise a standard or not, by publishing a reference in the Official Journal. If a version is not harmonised, it does not have legal effect at European level, although it could still be useful for other purposes .\n\n### History of the technical standards and harmonisation",
+        "## The technical standard\n\nFor a technical standard to become a harmonised European standard or norm (sometimes referred to as a 'HEN'), with legal force under European law, two conditions apply:\n\n- The standard is developed by one or more of the three European Standards Organisations under a mandate from the European Commission. These organisations, also known as ESOs, are: ETSI , CEN and CENELEC ).",
+        "harmonisation  of  different  rules  currently  existing  in  their  respective  legal  systems,\nbut  can  rather  be  better  achieved  at  Union  level,  the  Union  may  adopt  measures,  in\naccordance with the principle of subsidiarity as set out in Article 5 of the Treaty on\nEuropean Union. In accordance with the principle of proportionality, as set out in that\nArticle, this Directive does not go beyond what is necessary in order to achieve that\nobjective,\n\nHAVE ADOPTED THIS DIRECTIVE:",
+        "harmonised standards and a common methodology to test the conformity of content on\nwebsites and mobile applications with those principles. That European standard was\nadopted  on  the  basis  of  mandate  M/376  issued  by  the  Commission  to  the  European\nstandardisation  organisations.  Pending  publication  of  the  references  to  harmonised\nstandards, or of parts thereof, in the Official Journal of the European Union, the relevant",
+        "‘European standard’ means a European standard as defined in point (1)(b) of Article 2\nof Regulation (EU) No 1025/2012;\n\n‘harmonised  standard’  means  a  harmonised  standard  as  defined  in  point  (1)(c)  of\nArticle 2 of Regulation (EU) No 1025/2012;\n\n‘time-based  media’  means  media  of  the  following  types:  audio-only,  video-only,\naudio-video, audio and/or video combined with interaction;"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00011",
+        "news/article_02::chunk-00008",
+        "legal/directive_eu_2016_2102::chunk-00109",
+        "legal/directive_eu_2016_2102::chunk-00068",
+        "legal/directive_eu_2016_2102::chunk-00122"
+      ],
+      "latency_seconds": 4.751,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 7,
+      "config": "B",
+      "question": "What two conditions make a technical standard a harmonised European standard with legal force?",
+      "expected_answer": "It must be developed by one or more European Standards Organisations under a Commission mandate, and a reference to the specific version must be published in the Official Journal of the EU.",
+      "expected_context": "A harmonised standard is developed by an ESO under a Commission mandate and its specific version is referenced in the Official Journal.",
+      "answer": "Để một tiêu chuẩn kỹ thuật trở thành tiêu chuẩn châu Âu hài hòa (harmonised standard) có hiệu lực pháp lý theo luật châu Âu, hai điều kiện sau phải được đáp ứng:\n\n*   Tiêu chuẩn đó phải được phát triển bởi một hoặc nhiều trong ba Tổ chức Tiêu chuẩn hóa châu Âu (ESOs), bao gồm ETSI, CEN và CENELEC [S5].\n*   Tiêu chuẩn đó phải được phát triển theo một nhiệm vụ (mandate) từ Ủy ban châu Âu [S5].\n\nNgoài ra, Ủy ban châu Âu phải quyết định hài hòa tiêu chuẩn đó bằng cách công bố tài liệu tham khảo trên Công báo (Official Journal) [S1].",
+      "contexts": [
+        "Not all versions of a technical standard are necessarily harmonised. It is up to the European Commission to decide whether to harmonise a standard or not, by publishing a reference in the Official Journal. If a version is not harmonised, it does not have legal effect at European level, although it could still be useful for other purposes .\n\n### History of the technical standards and harmonisation",
+        "‘European standard’ means a European standard as defined in point (1)(b) of Article 2\nof Regulation (EU) No 1025/2012;\n\n‘harmonised  standard’  means  a  harmonised  standard  as  defined  in  point  (1)(c)  of\nArticle 2 of Regulation (EU) No 1025/2012;\n\n‘time-based  media’  means  media  of  the  following  types:  audio-only,  video-only,\naudio-video, audio and/or video combined with interaction;",
+        "harmonised standards and a common methodology to test the conformity of content on\nwebsites and mobile applications with those principles. That European standard was\nadopted  on  the  basis  of  mandate  M/376  issued  by  the  Commission  to  the  European\nstandardisation  organisations.  Pending  publication  of  the  references  to  harmonised\nstandards, or of parts thereof, in the Official Journal of the European Union, the relevant",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "## The technical standard\n\nFor a technical standard to become a harmonised European standard or norm (sometimes referred to as a 'HEN'), with legal force under European law, two conditions apply:\n\n- The standard is developed by one or more of the three European Standards Organisations under a mandate from the European Commission. These organisations, also known as ESOs, are: ETSI , CEN and CENELEC )."
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00011",
+        "legal/directive_eu_2016_2102::chunk-00122",
+        "legal/directive_eu_2016_2102::chunk-00068",
+        "news/article_02::chunk-00006",
+        "news/article_02::chunk-00008"
+      ],
+      "latency_seconds": 5.592,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 8,
+      "config": "A",
+      "question": "Which standard was developed to support the WAD, and what does it cover?",
+      "expected_answer": "EN 301 549 supports the WAD and specifies accessibility requirements for ICT products and services.",
+      "expected_context": "EN 301 549 is titled Accessibility requirements for ICT products and services and was developed jointly to support the WAD.",
+      "answer": "Tiêu chuẩn được phát triển để hỗ trợ Chỉ thị về khả năng tiếp cận web (WAD) là EN 301 549 - \"Accessibility requirements for ICT products and services\" [S2].\n\nVề phạm vi bao phủ, tiêu chuẩn này bao gồm các yêu cầu về khả năng tiếp cận cho các sản phẩm và dịch vụ ICT [S2]. Cụ thể hơn:\n* Tiêu chuẩn này bao gồm các yêu cầu không thuộc WCAG 2.1 [S3].\n* Nó cũng bao gồm các yêu cầu không liên quan đến WAD, chẳng hạn như các yêu cầu về khả năng tiếp cận của hệ thống phần cứng máy tính [S3].\n* Các yêu cầu của tiêu chuẩn có liên quan đến WAD được xác định trong Phụ lục A (Annex A) [S3].\n* Khi nội dung của trang web hoặc ứng dụng di động đáp ứng tất cả các yêu cầu kỹ thuật áp dụng được xác định trong tiêu chuẩn, nó được coi là \"có thể tiếp cận\" (accessible) theo WAD, tạo ra một \"sự giả định về sự tuân thủ\" (presumption of conformity) về mặt pháp lý [S5].",
+      "contexts": [
+        "When the WAD was published in December 2016, there was no standard to provide a presumption of conformity. However, a standard for the 'accessibility requirements suitable for public procurement of ICT products and services in Europe' (EN 301 549 v1.1.2) had already been published in April 2015 through a previous standardisation mandate (Mandate 376). So WAD Article 6 mentions EN 301 549 v1.1.2, as setting minimum requirements, pending the drafting of a new standard under a new Mandate 554.",
+        "- A reference to the specific version of the standard must be published in the Official Journal of the EU.\n\nThe standard developed jointly by the three ESOs to support the WAD is ' EN 301 549 - Accessibility requirements for ICT products and services '.\n\nOnly 2 versions of standard EN 301 549 have been harmonised to date:\n\n- version EN 301 549 v2.1.2 , harmonised in December 2018 (now replaced and no longer a presumption of conformity);",
+        "However, EN 301 549 v3.2.1 includes requirements that are not part of WCAG 2.1 . EN 301 549 also includes requirements that are not relevant to the WAD, for example accessibility requirements of computer hardware systems. The requirements of the standard that are relevant to the WAD are defined in Annex A .",
+        "A third implementing decision on the harmonised standard for websites and mobile applications that provides for the presumption of conformity with the WAD was adopted in December 2018 and then amended in August 2021 . Find more information about standards and harmonisation .\n\n### Transposition of the Web Accessibility Directive\n\nAll Member States have transposed the Directive into national law (deadline was 23 September 2018). You can access the list of the national transposition measures .",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00012",
+        "news/article_02::chunk-00009",
+        "news/article_02::chunk-00016",
+        "news/article_01::chunk-00014",
+        "news/article_02::chunk-00006"
+      ],
+      "latency_seconds": 59.65,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 8,
+      "config": "B",
+      "question": "Which standard was developed to support the WAD, and what does it cover?",
+      "expected_answer": "EN 301 549 supports the WAD and specifies accessibility requirements for ICT products and services.",
+      "expected_context": "EN 301 549 is titled Accessibility requirements for ICT products and services and was developed jointly to support the WAD.",
+      "answer": "Tiêu chuẩn được phát triển để hỗ trợ Chỉ thị về khả năng tiếp cận web (WAD) là EN 301 549 - \"Accessibility requirements for ICT products and services\" (Các yêu cầu về khả năng tiếp cận đối với các sản phẩm và dịch vụ ICT) [S5].\n\nTiêu chuẩn này bao gồm các yêu cầu về khả năng tiếp cận phù hợp cho việc mua sắm công các sản phẩm và dịch vụ ICT tại châu Âu [S2]. Nó cung cấp các yêu cầu kỹ thuật để làm rõ thế nào là \"có thể tiếp cận\" (accessible) và mang lại \"sự suy đoán về tính tuân thủ\" (presumption of conformity) đối với các trang web và ứng dụng di động [S1], [S3].",
+      "contexts": [
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "When the WAD was published in December 2016, there was no standard to provide a presumption of conformity. However, a standard for the 'accessibility requirements suitable for public procurement of ICT products and services in Europe' (EN 301 549 v1.1.2) had already been published in April 2015 through a previous standardisation mandate (Mandate 376). So WAD Article 6 mentions EN 301 549 v1.1.2, as setting minimum requirements, pending the drafting of a new standard under a new Mandate 554.",
+        "A third implementing decision on the harmonised standard for websites and mobile applications that provides for the presumption of conformity with the WAD was adopted in December 2018 and then amended in August 2021 . Find more information about standards and harmonisation .\n\n### Transposition of the Web Accessibility Directive\n\nAll Member States have transposed the Directive into national law (deadline was 23 September 2018). You can access the list of the national transposition measures .",
+        "The rules laid down in the WAD reflect the Commission's ongoing work to build a social and inclusive European 'Union of equality', where all Europeans can play a full and active part in the digital economy and society. The directive obliges websites and apps of public sector bodies to be “more accessible”, providing a technical standard which clarifies what is “accessible”. It also foresees a limited number of exceptions that include broadcasters and live streaming.\n\nThe WAD requires:",
+        "- A reference to the specific version of the standard must be published in the Official Journal of the EU.\n\nThe standard developed jointly by the three ESOs to support the WAD is ' EN 301 549 - Accessibility requirements for ICT products and services '.\n\nOnly 2 versions of standard EN 301 549 have been harmonised to date:\n\n- version EN 301 549 v2.1.2 , harmonised in December 2018 (now replaced and no longer a presumption of conformity);"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00006",
+        "news/article_02::chunk-00012",
+        "news/article_01::chunk-00014",
+        "news/article_01::chunk-00008",
+        "news/article_02::chunk-00009"
+      ],
+      "latency_seconds": 4.647,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 9,
+      "config": "A",
+      "question": "Which version of EN 301 549 was harmonised in August 2021?",
+      "expected_answer": "EN 301 549 version 3.2.1 was harmonised on 18 August 2021.",
+      "expected_context": "EN 301 549 v3.2.1 was harmonised on 18 August 2021.",
+      "answer": "Phiên bản EN 301 549 được hài hòa hóa vào ngày 18 tháng 8 năm 2021 là phiên bản v3.2.1 [S1], [S5].",
+      "contexts": [
+        "- the latest version EN 301 549 v3.2.1 , harmonised on 18 August 2021.\n\nA period of overlap is provided for when a new version of the standard is harmonised, so that Member States have time to adapt to it.",
+        "ensured by European standard EN 301 549 V1.1.2 (2015-04).",
+        "- A reference to the specific version of the standard must be published in the Official Journal of the EU.\n\nThe standard developed jointly by the three ESOs to support the WAD is ' EN 301 549 - Accessibility requirements for ICT products and services '.\n\nOnly 2 versions of standard EN 301 549 have been harmonised to date:\n\n- version EN 301 549 v2.1.2 , harmonised in December 2018 (now replaced and no longer a presumption of conformity);",
+        "So, whilst WCAG 2.2 was published on 5 October 2023, it is not yet used in a version of EN 301 549 that has been harmonised by referencing it in the Official Journal of the European Union. The process to update and reference a harmonised standard has already started, but takes time and will not be completed until 2025 at the earliest .",
+        "In order to improve the standard from an editorial perspective as well as to correct some inconsistencies, a new version of the standard (EN 301 549 v3.1.1) was published in November 2019 and submitted for harmonisation. In the end, this version was never harmonised (referenced in the OJ). Instead, v3.2.1, published in March 2021, was harmonised on 18 August 2021.\n\n## The actual requirements"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00010",
+        "legal/directive_eu_2016_2102::chunk-00142",
+        "news/article_02::chunk-00009",
+        "news/article_02::chunk-00018",
+        "news/article_02::chunk-00014"
+      ],
+      "latency_seconds": 20.642,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 9,
+      "config": "B",
+      "question": "Which version of EN 301 549 was harmonised in August 2021?",
+      "expected_answer": "EN 301 549 version 3.2.1 was harmonised on 18 August 2021.",
+      "expected_context": "EN 301 549 v3.2.1 was harmonised on 18 August 2021.",
+      "answer": "Phiên bản EN 301 549 được hài hòa hóa vào tháng 8 năm 2021 là phiên bản v3.2.1 [S1], [S5].",
+      "contexts": [
+        "- the latest version EN 301 549 v3.2.1 , harmonised on 18 August 2021.\n\nA period of overlap is provided for when a new version of the standard is harmonised, so that Member States have time to adapt to it.",
+        "- A reference to the specific version of the standard must be published in the Official Journal of the EU.\n\nThe standard developed jointly by the three ESOs to support the WAD is ' EN 301 549 - Accessibility requirements for ICT products and services '.\n\nOnly 2 versions of standard EN 301 549 have been harmonised to date:\n\n- version EN 301 549 v2.1.2 , harmonised in December 2018 (now replaced and no longer a presumption of conformity);",
+        "The new standard, 'accessibility requirements for ICT products and services' (EN 301 549 v2.1.2), was published in August 2018. It was referenced in the Official Journal on 20th December 2018 and was a significant improvement on v1.1.2.",
+        "So, whilst WCAG 2.2 was published on 5 October 2023, it is not yet used in a version of EN 301 549 that has been harmonised by referencing it in the Official Journal of the European Union. The process to update and reference a harmonised standard has already started, but takes time and will not be completed until 2025 at the earliest .",
+        "In order to improve the standard from an editorial perspective as well as to correct some inconsistencies, a new version of the standard (EN 301 549 v3.1.1) was published in November 2019 and submitted for harmonisation. In the end, this version was never harmonised (referenced in the OJ). Instead, v3.2.1, published in March 2021, was harmonised on 18 August 2021.\n\n## The actual requirements"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00010",
+        "news/article_02::chunk-00009",
+        "news/article_02::chunk-00013",
+        "news/article_02::chunk-00018",
+        "news/article_02::chunk-00014"
+      ],
+      "latency_seconds": 5.773,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 10,
+      "config": "A",
+      "question": "Why does meeting WCAG 2.1 alone not guarantee presumption of conformity with the WAD?",
+      "expected_answer": "EN 301 549 contains requirements beyond WCAG 2.1, so satisfying only WCAG 2.1 does not satisfy every applicable requirement of the harmonised standard.",
+      "expected_context": "EN 301 549 goes further than WCAG 2.1; meeting all WCAG 2.1 success criteria therefore does not ensure WAD presumption of conformity.",
+      "answer": "Việc đáp ứng các tiêu chí thành công của WCAG 2.1 không đảm bảo sự \"giả định về tính tuân thủ\" (presumption of conformity) với Chỉ thị về khả năng tiếp cận web (WAD) vì tiêu chuẩn EN 301 549 bao gồm các yêu cầu vượt xa so với các yêu cầu của WCAG [S5]. Để đạt được sự giả định về tính tuân thủ, nội dung của trang web hoặc ứng dụng di động phải đáp ứng tất cả các yêu cầu kỹ thuật hiện hành được xác định trong tiêu chuẩn hài hòa [S3].",
+      "contexts": [
+        "It is important to note that versions of WCAG later than 2.1 are not automatically relevant to the WAD. New or updated requirements in later versions of WCAG, while practically useful, only become legally relevant if they are included in Annex A of a harmonised version of EN 301 549 that is referenced in the Official Journal.",
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "When the WAD was published in December 2016, there was no standard to provide a presumption of conformity. However, a standard for the 'accessibility requirements suitable for public procurement of ICT products and services in Europe' (EN 301 549 v1.1.2) had already been published in April 2015 through a previous standardisation mandate (Mandate 376). So WAD Article 6 mentions EN 301 549 v1.1.2, as setting minimum requirements, pending the drafting of a new standard under a new Mandate 554.",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history"
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00017",
+        "news/article_04::chunk-00015",
+        "news/article_02::chunk-00006",
+        "news/article_02::chunk-00012",
+        "news/article_02::chunk-00019"
+      ],
+      "latency_seconds": 5.473,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 10,
+      "config": "B",
+      "question": "Why does meeting WCAG 2.1 alone not guarantee presumption of conformity with the WAD?",
+      "expected_answer": "EN 301 549 contains requirements beyond WCAG 2.1, so satisfying only WCAG 2.1 does not satisfy every applicable requirement of the harmonised standard.",
+      "expected_context": "EN 301 549 goes further than WCAG 2.1; meeting all WCAG 2.1 success criteria therefore does not ensure WAD presumption of conformity.",
+      "answer": "Việc đáp ứng các tiêu chí thành công của WCAG 2.1 không đảm bảo sự suy đoán về tính phù hợp (presumption of conformity) với Chỉ thị về khả năng tiếp cận web (WAD) vì những lý do sau:\n\n*   Tiêu chuẩn EN 301 549 đi xa hơn các yêu cầu của WCAG [S1].\n*   EN 301 549 v3.2.1 bao gồm các yêu cầu không nằm trong WCAG 2.1 [S3].\n*   Để đạt được sự suy đoán về tính phù hợp, nội dung phải đáp ứng tất cả các yêu cầu kỹ thuật áp dụng được định nghĩa trong tiêu chuẩn hài hòa (được quy định tại Phụ lục A của EN 301 549) [S3], [S4].",
+      "contexts": [
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history",
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "However, EN 301 549 v3.2.1 includes requirements that are not part of WCAG 2.1 . EN 301 549 also includes requirements that are not relevant to the WAD, for example accessibility requirements of computer hardware systems. The requirements of the standard that are relevant to the WAD are defined in Annex A .",
+        "To ensure there is a common understanding of what is meant by 'accessible' in this context, the WAD is supported by a harmonised technical standard that offers a legal 'presumption of conformity'. This means that if the content of a website or mobile app meets all the applicable technical requirements defined in the standard, it is assumed to be 'accessible' under the WAD",
+        "It is important to note that versions of WCAG later than 2.1 are not automatically relevant to the WAD. New or updated requirements in later versions of WCAG, while practically useful, only become legally relevant if they are included in Annex A of a harmonised version of EN 301 549 that is referenced in the Official Journal."
+      ],
+      "source_ids": [
+        "news/article_02::chunk-00019",
+        "news/article_04::chunk-00015",
+        "news/article_02::chunk-00016",
+        "news/article_02::chunk-00006",
+        "news/article_02::chunk-00017"
+      ],
+      "latency_seconds": 4.407,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 11,
+      "config": "A",
+      "question": "What are the four principles used to organise WCAG 2.2 guidelines?",
+      "expected_answer": "The principles are perceivable, operable, understandable, and robust.",
+      "expected_context": "WCAG 2.2 guidelines are organised under four principles: perceivable, operable, understandable, and robust.",
+      "answer": "Bốn nguyên tắc được sử dụng để tổ chức các hướng dẫn của WCAG 2.2 là: dễ nhận biết (perceivable), có thể vận hành (operable), dễ hiểu (understandable) và mạnh mẽ (robust) [S1].",
+      "contexts": [
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG .",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 .",
+        "Opportunities for contributing to WCAG and other WAI work are introduced in Participate in WAI .\n\n## More about WCAG\n\nWCAG is part of a series of accessibility guidelines, including the Authoring Tool Accessibility Guidelines (ATAG) and the User Agent Accessibility Guidelines (UAAG). Essential Components of Web Accessibility explains the relationship between the different guidelines.\n\n### Frequently asked questions (FAQ)\n\nSee the WCAG 2 FAQ for more information on:",
+        "## Who develops WCAG\n\nThe WCAG technical documents are developed by the Accessibility Guidelines Working Group ( AG WG ) (formerly the Web Content Accessibility Guidelines Working Group) , which is part of the World Wide Web Consortium ( W3C ) Web Accessibility Initiative ( WAI ).\n\nWAI updates Techniques for WCAG 2 and Understanding WCAG 2 periodically. We welcome comments and submission of new techniques .",
+        "For a short summary of the WCAG 2 guidelines, see WCAG 2 at a Glance .\n\n### Supporting material and supplemental guidance\n\nThe following resources help you understand and implement WCAG, and improve accessibility beyond WCAG:\n\n- Quick Reference / How to Meet WCAG 2 / Checklist\n\n- Understanding WCAG 2\n\n- Techniques for WCAG 2\n\n- Test Rules for WCAG 2\n\n- Supplemental Guidance\n\nPlease read about these WCAG 2 resources from WCAG 2 Documents .\n\n## WCAG 2.0, 2.1, 2.2"
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00009",
+        "news/article_04::chunk-00013",
+        "news/article_04::chunk-00019",
+        "news/article_04::chunk-00018",
+        "news/article_04::chunk-00010"
+      ],
+      "latency_seconds": 5.65,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 11,
+      "config": "B",
+      "question": "What are the four principles used to organise WCAG 2.2 guidelines?",
+      "expected_answer": "The principles are perceivable, operable, understandable, and robust.",
+      "expected_context": "WCAG 2.2 guidelines are organised under four principles: perceivable, operable, understandable, and robust.",
+      "answer": "Bốn nguyên tắc được sử dụng để tổ chức các hướng dẫn của WCAG 2.2 là: dễ nhận biết (perceivable), dễ vận hành (operable), dễ hiểu (understandable) và mạnh mẽ (robust) [S1].",
+      "contexts": [
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG .",
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "- Planning & Policies\n\n- Design & Develop\n\n- Test & Evaluate\n\n- Teach & Advocate\n\n- Standards/ Guidelines\n\n- Home\n\n- Standards/ Guidelines\n\n- Web Content – WCAG 2\n\n- Standards/ Guidelines\n\n- Web Content – WCAG 2\n\n- How to Meet WCAG 2 (Quick Reference)\n\n- At a Glance\n\n- The Documents\n\n- Applying to Non-Web ICT\n\n- New in 2.2\n\n- New in 2.1\n\n- Translations\n\n- Commenting\n\n- Conformance Logos\n\n- FAQ\n\n- WCAG 3 Draft\n\n- Authoring Tools – ATAG\n\n- At a Glance\n\n- For LMS\n\n- For No-Code Tools",
+        "## The actual requirements\n\nEN 301 549 draws heavily from the Web Content Accessibility Guidelines v2.1 , published by the W3C and known as WCAG 2.1. These WCAG are internationally recognised requirements for producing web content. They are considered best practice, and are very widely used.",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00009",
+        "news/article_04::chunk-00015",
+        "news/article_04::chunk-00001",
+        "news/article_02::chunk-00015",
+        "news/article_04::chunk-00013"
+      ],
+      "latency_seconds": 4.006,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 12,
+      "config": "A",
+      "question": "What are the three WCAG conformance levels for success criteria?",
+      "expected_answer": "The three levels are A, AA, and AAA.",
+      "expected_context": "WCAG success criteria are assigned to three levels: A, AA, and AAA.",
+      "answer": "Các tiêu chí thành công (success criteria) của WCAG được chia thành ba cấp độ: A, AA và AAA [S1].",
+      "contexts": [
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG .",
+        "Conformance evaluation determines how well web pages or applications meet accessibility standards. W3C’s WCAG Evaluation Methodology (WCAG-EM) is an approach for determining conformance to Web Content Accessibility Guidelines (WCAG).\n\nSpecifications for expressing test results (EARL) and for writing accessibility test rules (Accessibility Conformance Testing (ACT) Rules Format) are introduced in Evaluation Standards Overview .\n\n## People",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history",
+        "Any updates in related documents are intended to support backwards compatibility in practice. The main change is that in WCAG 2.2, one success criterion (4.1.1 Parsing) is obsolete. Notes added to WCAG 2.1 and WCAG 2.0 errata address this, as explained in WCAG 2 FAQ, 4.1.1 Parsing . WCAG 2.2 also includes Notes about different languages; more information is in WCAG 2 FAQ, internationalization .",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00009",
+        "news/article_05::chunk-00006",
+        "news/article_02::chunk-00019",
+        "news/article_04::chunk-00014",
+        "news/article_04::chunk-00013"
+      ],
+      "latency_seconds": 2.748,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 12,
+      "config": "B",
+      "question": "What are the three WCAG conformance levels for success criteria?",
+      "expected_answer": "The three levels are A, AA, and AAA.",
+      "expected_context": "WCAG success criteria are assigned to three levels: A, AA, and AAA.",
+      "answer": "Ba cấp độ tuân thủ (conformance levels) cho các tiêu chí thành công (success criteria) của WCAG là A, AA và AAA [S1].",
+      "contexts": [
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG .",
+        "Conformance evaluation determines how well web pages or applications meet accessibility standards. W3C’s WCAG Evaluation Methodology (WCAG-EM) is an approach for determining conformance to Web Content Accessibility Guidelines (WCAG).\n\nSpecifications for expressing test results (EARL) and for writing accessibility test rules (Accessibility Conformance Testing (ACT) Rules Format) are introduced in Evaluation Standards Overview .\n\n## People",
+        "Any updates in related documents are intended to support backwards compatibility in practice. The main change is that in WCAG 2.2, one success criterion (4.1.1 Parsing) is obsolete. Notes added to WCAG 2.1 and WCAG 2.0 errata address this, as explained in WCAG 2 FAQ, 4.1.1 Parsing . WCAG 2.2 also includes Notes about different languages; more information is in WCAG 2 FAQ, internationalization .",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00009",
+        "news/article_05::chunk-00006",
+        "news/article_04::chunk-00014",
+        "news/article_02::chunk-00019",
+        "news/article_04::chunk-00013"
+      ],
+      "latency_seconds": 5.439,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 13,
+      "config": "A",
+      "question": "How do WCAG 2.0, 2.1, and 2.2 relate in terms of backwards compatibility?",
+      "expected_answer": "Later WCAG 2 versions add criteria without generally changing earlier criteria; content conforming to WCAG 2.2 also conforms to WCAG 2.1 and 2.0.",
+      "expected_context": "WCAG 2 versions are backwards compatible, so WCAG 2.2-conforming content also conforms to WCAG 2.1 and WCAG 2.0.",
+      "answer": "WCAG 2.0, 2.1 và 2.2 được thiết kế để có tính \"tương thích ngược\" (backwards compatible) [S1]. Điều này có nghĩa là nội dung tuân thủ WCAG 2.2 cũng đồng thời tuân thủ WCAG 2.1 và WCAG 2.0 [S1]. Các phiên bản sau không thay đổi các tiêu chí thành công hiện có mà chỉ bổ sung thêm các tiêu chí mới (ngoại trừ trường hợp của tiêu chí 4.1.1 Parsing) [S2], [S5]. Do đó, nếu bạn muốn đáp ứng tất cả các phiên bản, bạn có thể sử dụng các tài nguyên của WCAG 2.2 mà không cần xem xét các phiên bản trước đó [S1].",
+      "contexts": [
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 .",
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG .",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history",
+        "Any updates in related documents are intended to support backwards compatibility in practice. The main change is that in WCAG 2.2, one success criterion (4.1.1 Parsing) is obsolete. Notes added to WCAG 2.1 and WCAG 2.0 errata address this, as explained in WCAG 2 FAQ, 4.1.1 Parsing . WCAG 2.2 also includes Notes about different languages; more information is in WCAG 2 FAQ, internationalization ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00015",
+        "news/article_04::chunk-00013",
+        "news/article_04::chunk-00009",
+        "news/article_02::chunk-00019",
+        "news/article_04::chunk-00014"
+      ],
+      "latency_seconds": 13.559,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "None"
+    },
+    {
+      "case_id": 13,
+      "config": "B",
+      "question": "How do WCAG 2.0, 2.1, and 2.2 relate in terms of backwards compatibility?",
+      "expected_answer": "Later WCAG 2 versions add criteria without generally changing earlier criteria; content conforming to WCAG 2.2 also conforms to WCAG 2.1 and 2.0.",
+      "expected_context": "WCAG 2 versions are backwards compatible, so WCAG 2.2-conforming content also conforms to WCAG 2.1 and WCAG 2.0.",
+      "answer": "WCAG 2.0, 2.1 và 2.2 được thiết kế để có tính \"tương thích ngược\" (backwards compatible) [S1]. Điều này có nghĩa là nội dung tuân thủ WCAG 2.2 cũng sẽ tuân thủ WCAG 2.1 và WCAG 2.0 [S1]. Các bản cập nhật trong các tài liệu liên quan cũng được thực hiện nhằm hỗ trợ tính tương thích ngược trong thực tế [S5].",
+      "contexts": [
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "The WCAG 2 requirements (success criteria) are the same in later versions. For example, the success criteria in WCAG 2.1 are not changed in WCAG 2.2. Later versions add new success criteria, and do not change existing success criteria. One exception is 4.1.1 Parsing noted below.\n\n- WCAG 2.0 has 12 guidelines.\n\n- WCAG 2.1 adds 1 guideline and 17 success criteria. They are introduced in What’s New in WCAG 2.1 .\n\n- WCAG 2.2 adds 9 success criteria. They are introduced in What’s New in WCAG 2.2 .",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history",
+        "For a short summary of the WCAG 2 guidelines, see WCAG 2 at a Glance .\n\n### Supporting material and supplemental guidance\n\nThe following resources help you understand and implement WCAG, and improve accessibility beyond WCAG:\n\n- Quick Reference / How to Meet WCAG 2 / Checklist\n\n- Understanding WCAG 2\n\n- Techniques for WCAG 2\n\n- Test Rules for WCAG 2\n\n- Supplemental Guidance\n\nPlease read about these WCAG 2 resources from WCAG 2 Documents .\n\n## WCAG 2.0, 2.1, 2.2",
+        "Any updates in related documents are intended to support backwards compatibility in practice. The main change is that in WCAG 2.2, one success criterion (4.1.1 Parsing) is obsolete. Notes added to WCAG 2.1 and WCAG 2.0 errata address this, as explained in WCAG 2 FAQ, 4.1.1 Parsing . WCAG 2.2 also includes Notes about different languages; more information is in WCAG 2 FAQ, internationalization ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00015",
+        "news/article_04::chunk-00013",
+        "news/article_02::chunk-00019",
+        "news/article_04::chunk-00010",
+        "news/article_04::chunk-00014"
+      ],
+      "latency_seconds": 3.268,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "none"
+    },
+    {
+      "case_id": 14,
+      "config": "A",
+      "question": "Can an automated evaluation tool alone determine whether a website is accessible?",
+      "expected_answer": "No. Tools can assist, but knowledgeable human evaluation is required to determine whether a site is accessible.",
+      "expected_context": "No tool alone can determine conformance; knowledgeable human evaluation is required.",
+      "answer": "Không, không một công cụ nào có thể xác định một mình liệu một trang web có đáp ứng các tiêu chuẩn về khả năng tiếp cận hay không [S1]. Việc đánh giá khả năng tiếp cận đòi hỏi phải có sự tham gia của con người với kiến thức chuyên môn [S1].",
+      "contexts": [
+        "There are evaluation tools that help with evaluation. However, no tool alone can determine if a site meets accessibility standards. Knowledgeable human evaluation is required to determine if a site is accessible.\n\n## Initial Checks\n\nThis video is available with more accessibility features: Video: Easy Checks Overview .\n\nEven if you don’t know anything about accessibility and you don’t have a robust accessibility tool, you can check some aspects of accessibility.\n\n## Tools",
+        "a\n\nb\n\nan  actual  evaluation  of  the  website's  or  mobile  application's  compliance  with  the\nrequirements of Directive (EU) 2016/2102, such as:\n—\na self-assessment done by the public sector body,\n—\nan assessment carried out by a third party, for example a certification;\nany other measures, as deemed appropriate by the Member States, which provide equal\nassurance that the declarations made in the statement are accurate.\n\n2",
+        "preferences.\n1.2.4. The in-depth monitoring method may include, where appropriate, usability tests such as observing and analysing\nhow users with disabilities perceive the content of the website or mobile application and how complex it is for\nthem to use interface components like navigation menus or forms.\n1.2.5. The monitoring body may use, fully or in part, evaluation results provided by the public sector body under the\nfollowing cumulative conditions:",
+        "down in point 1.3 of Annex I.\nArticle 6\nSampling of the websites and mobile applications\nMember States shall ensure that the sampling of the websites and mobile applications to be monitored is done in\naccordance with the requirements laid down in points 2 and 3 of Annex I.\nArticle 7\nInformation on the monitoring results\nIf deficiencies have been identified, Member States shall ensure that the public sector bodies are provided with data and",
+        "monitoring methodology to monitor the accessibility of the content of such websites and mobile applications,\nrelating to essential online administrative functions.\n(12) The measures provided for in this Decision are in accordance with the opinion of the committee established by\nArticle 11(1) of Directive (EU) 2016/2102,\nHAS ADOPTED THIS DECISION:\nArticle 1\nSubject matter and scope\nThis Decision establishes a methodology for monitoring the conformity of websites and mobile applications of public"
+      ],
+      "source_ids": [
+        "news/article_05::chunk-00004",
+        "legal/implementing_decision_eu_2018_1523::chunk-00011",
+        "legal/official_journal_l256_2018::chunk-00731",
+        "legal/official_journal_l256_2018::chunk-00721",
+        "legal/official_journal_l256_2018::chunk-00712"
+      ],
+      "latency_seconds": 4.485,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "none"
+    },
+    {
+      "case_id": 14,
+      "config": "B",
+      "question": "Can an automated evaluation tool alone determine whether a website is accessible?",
+      "expected_answer": "No. Tools can assist, but knowledgeable human evaluation is required to determine whether a site is accessible.",
+      "expected_context": "No tool alone can determine conformance; knowledgeable human evaluation is required.",
+      "answer": "Không, không một công cụ nào có thể tự mình xác định liệu một trang web có đáp ứng các tiêu chuẩn về khả năng tiếp cận hay không [S1]. Việc đánh giá bởi con người có kiến thức chuyên môn là cần thiết để xác định xem một trang web có thực sự dễ tiếp cận hay không [S1].",
+      "contexts": [
+        "There are evaluation tools that help with evaluation. However, no tool alone can determine if a site meets accessibility standards. Knowledgeable human evaluation is required to determine if a site is accessible.\n\n## Initial Checks\n\nThis video is available with more accessibility features: Video: Easy Checks Overview .\n\nEven if you don’t know anything about accessibility and you don’t have a robust accessibility tool, you can check some aspects of accessibility.\n\n## Tools",
+        "monitoring methodology to monitor the accessibility of the content of such websites and mobile applications,\nrelating to essential online administrative functions.\n(12) The measures provided for in this Decision are in accordance with the opinion of the committee established by\nArticle 11(1) of Directive (EU) 2016/2102,\nHAS ADOPTED THIS DECISION:\nArticle 1\nSubject matter and scope\nThis Decision establishes a methodology for monitoring the conformity of websites and mobile applications of public",
+        "a\n\nb\n\nan  actual  evaluation  of  the  website's  or  mobile  application's  compliance  with  the\nrequirements of Directive (EU) 2016/2102, such as:\n—\na self-assessment done by the public sector body,\n—\nan assessment carried out by a third party, for example a certification;\nany other measures, as deemed appropriate by the Member States, which provide equal\nassurance that the declarations made in the statement are accurate.\n\n2",
+        "## Tools\n\nThis video is available with more accessibility features: Video: Evaluation Tools Overview .\n\nWeb accessibility evaluation tools are software programs or online services that help determine if web content meets accessibility standards.\n\n## Conformance Evaluation and Reports\n\nThis video is available with more accessibility features: Video: Conformance Evaluation Overview .",
+        "- List of Evaluation Tools\n\n- Conformance Evaluation, Reports\n\n- WCAG-EM Conformance Methodology\n\n- WCAG-EM Report Tool\n\n- Report Template\n\n- Using Combined Expertise\n\n- Involving Users\n\n- English (original)\n\n- español\n\n- français\n\nAll Translations\n\nTranslating WAI Resources\n\n# Evaluating Web Accessibility Overview\n\n## Summary\n\nThis page links to resources to help evaluate web accessibility. Accessibility evaluation is also called “assessment”, “audit”, and “testing”.\n\n- Introduction"
+      ],
+      "source_ids": [
+        "news/article_05::chunk-00004",
+        "legal/official_journal_l256_2018::chunk-00712",
+        "legal/implementing_decision_eu_2018_1523::chunk-00011",
+        "news/article_05::chunk-00005",
+        "news/article_05::chunk-00002"
+      ],
+      "latency_seconds": 2.888,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "none"
+    },
+    {
+      "case_id": 15,
+      "config": "A",
+      "question": "What is WCAG-EM used for?",
+      "expected_answer": "WCAG-EM is a methodology for evaluating how well web pages or applications conform to WCAG.",
+      "expected_context": "W3C's WCAG Evaluation Methodology is an approach for determining conformance to the Web Content Accessibility Guidelines.",
+      "answer": "Tôi không thể xác minh thông tin này từ các nguồn hiện có.",
+      "contexts": [
+        "WCAG applies to dynamic content, multimedia, web on mobile, and AI web interfaces. WCAG can also be applied to non-web information and communications technologies (ICT) such as native apps, software, and documents, as described in WCAG2ICT .\n\n## Who WCAG is for\n\nWCAG is for those who want a technical standard. It is not an introduction to accessibility. For links to introductory material, see “Where should I start?” in the FAQ .\n\nWCAG is primarily intended for:",
+        "It is important to note that versions of WCAG later than 2.1 are not automatically relevant to the WAD. New or updated requirements in later versions of WCAG, while practically useful, only become legally relevant if they are included in Annex A of a harmonised version of EN 301 549 that is referenced in the Official Journal.",
+        "WCAG is primarily intended for:\n\n- web content developers (page authors, site designers, etc.)\n\n- web authoring tool developers\n\n- web accessibility evaluation tool developers\n\n- others who want or need a standard for web accessibility, including for mobile accessibility\n\nTo meet the needs of others — including policy makers, managers, and researchers — there are many different WAI Resources .\n\n## What is in WCAG 2",
+        "WCAG 2.0, WCAG 2.1, and WCAG 2.2 are all existing standards. WCAG 2.2 does not deprecate or supersede WCAG 2.1, and WCAG 2.1 does not deprecate or supersede WCAG 2.0. W3C encourages you to use the latest version of WCAG.\n\nWCAG 2.0, 2.1, and 2.2 are designed to be “backwards compatible”, which means content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0. If you want to meet all the versions, you can use the WCAG 2.2 resources and you do not need to look at earlier versions.",
+        "Member states are free to already use WCAG 2.2 if they wish, as there are no breaking changes compared to WCAG 2.1. However, the version of WCAG that is used in EN 301 549 remains WCAG 2.1.\n\nSince EN 301 549 goes further than the requirements of the WCAG, meeting all the success criteria of WCAG 2.1 will not ensure a presumption of conformity with the WAD. For further details on these differences, see 'latest changes to the standard'.\n\n## Requirements and standardisation history"
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00007",
+        "news/article_02::chunk-00017",
+        "news/article_04::chunk-00008",
+        "news/article_04::chunk-00015",
+        "news/article_02::chunk-00019"
+      ],
+      "latency_seconds": 5.398,
+      "faithfulness": 0.0,
+      "answer_relevance": 0.0,
+      "context_recall": 0.0,
+      "context_precision": 0.0,
+      "failure_reason": "The model failed to identify the definition of WCAG-EM despite it being present in the provided context."
+    },
+    {
+      "case_id": 15,
+      "config": "B",
+      "question": "What is WCAG-EM used for?",
+      "expected_answer": "WCAG-EM is a methodology for evaluating how well web pages or applications conform to WCAG.",
+      "expected_context": "W3C's WCAG Evaluation Methodology is an approach for determining conformance to the Web Content Accessibility Guidelines.",
+      "answer": "WCAG-EM (WCAG Evaluation Methodology) là một phương pháp được sử dụng để xác định mức độ tuân thủ đối với các Hướng dẫn về khả năng tiếp cận nội dung web (WCAG) [S2]. Ngoài ra, phương pháp này còn được liệt kê như một phần của các tài nguyên hỗ trợ đánh giá khả năng tiếp cận web [S3].",
+      "contexts": [
+        "WCAG is primarily intended for:\n\n- web content developers (page authors, site designers, etc.)\n\n- web authoring tool developers\n\n- web accessibility evaluation tool developers\n\n- others who want or need a standard for web accessibility, including for mobile accessibility\n\nTo meet the needs of others — including policy makers, managers, and researchers — there are many different WAI Resources .\n\n## What is in WCAG 2",
+        "Conformance evaluation determines how well web pages or applications meet accessibility standards. W3C’s WCAG Evaluation Methodology (WCAG-EM) is an approach for determining conformance to Web Content Accessibility Guidelines (WCAG).\n\nSpecifications for expressing test results (EARL) and for writing accessibility test rules (Accessibility Conformance Testing (ACT) Rules Format) are introduced in Evaluation Standards Overview .\n\n## People",
+        "- List of Evaluation Tools\n\n- Conformance Evaluation, Reports\n\n- WCAG-EM Conformance Methodology\n\n- WCAG-EM Report Tool\n\n- Report Template\n\n- Using Combined Expertise\n\n- Involving Users\n\n- English (original)\n\n- español\n\n- français\n\nAll Translations\n\nTranslating WAI Resources\n\n# Evaluating Web Accessibility Overview\n\n## Summary\n\nThis page links to resources to help evaluate web accessibility. Accessibility evaluation is also called “assessment”, “audit”, and “testing”.\n\n- Introduction",
+        "WCAG applies to dynamic content, multimedia, web on mobile, and AI web interfaces. WCAG can also be applied to non-web information and communications technologies (ICT) such as native apps, software, and documents, as described in WCAG2ICT .\n\n## Who WCAG is for\n\nWCAG is for those who want a technical standard. It is not an introduction to accessibility. For links to introductory material, see “Where should I start?” in the FAQ .\n\nWCAG is primarily intended for:",
+        "## What is in WCAG 2\n\nThe WCAG 2.2 has 13 guidelines. The guidelines are organized under 4 principles: perceivable, operable, understandable, and robust .\n\nFor each guideline, there are testable success criteria . The success criteria are at three levels: A, AA, and AAA .\n\nThe success criteria are what determine “conformance” to WCAG. That is, in order to meet WCAG, the content needs to meet the success criteria. Details are in the Conformance section of WCAG ."
+      ],
+      "source_ids": [
+        "news/article_04::chunk-00008",
+        "news/article_05::chunk-00006",
+        "news/article_05::chunk-00002",
+        "news/article_04::chunk-00007",
+        "news/article_04::chunk-00009"
+      ],
+      "latency_seconds": 4.135,
+      "faithfulness": 1.0,
+      "answer_relevance": 1.0,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "failure_reason": "none"
+    }
+  ],
+  "summary": {
+    "A": {
+      "faithfulness": 0.8667,
+      "answer_relevance": 0.8533,
+      "context_recall": 0.8333,
+      "context_precision": 0.84,
+      "average": 0.8483,
+      "mean_latency_seconds": 16.059
+    },
+    "B": {
+      "faithfulness": 0.9333,
+      "answer_relevance": 0.9233,
+      "context_recall": 0.9667,
+      "context_precision": 0.9667,
+      "average": 0.9475,
+      "mean_latency_seconds": 5.607
+    }
+  }
+}

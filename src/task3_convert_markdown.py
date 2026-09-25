@@ -5,7 +5,7 @@ from pathlib import Path
 
 from markitdown import MarkItDown
 
-from src.task1_collect_legal_docs import LEGAL_SOURCES
+from src.task1_collect_legal_docs import CANONICAL_LEGAL_SOURCES
 
 LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
 OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
@@ -22,7 +22,7 @@ def convert_legal_docs() -> None:
         body = converter.convert(str(path)).text_content.strip()
         if not body:
             raise ValueError(f"Conversion produced empty content: {path}")
-        source = LEGAL_SOURCES.get(path.name, "Unknown (locally supplied document)")
+        source = CANONICAL_LEGAL_SOURCES.get(path.name, "Unknown (locally supplied document)")
         header = f"<!-- landing: legal/{path.name} -->\n\n**Source:** {source}\n\n---\n\n"
         (output_dir / f"{path.stem}.md").write_text(header + body + "\n", encoding="utf-8")
 
